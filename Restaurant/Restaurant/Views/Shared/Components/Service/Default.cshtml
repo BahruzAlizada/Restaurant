@@ -1,0 +1,13 @@
+﻿@model List<Service> 
+
+@foreach (var item in Model)
+{
+    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="service-item rounded pt-3">
+			<div class="p-4">
+                <h5>@item.Title</h5>
+                <p>@item.Description</p>
+            </div>
+        </div>
+    </div>
+}

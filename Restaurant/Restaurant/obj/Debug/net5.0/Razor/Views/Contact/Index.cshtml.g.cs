@@ -26,8 +26,15 @@ using Restaurant.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\Esma\Desktop\Restaurant\Restaurant\Restaurant\Views\_ViewImports.cshtml"
+using Restaurant.ViewsModel;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3a9f18529ba51e4c0647891e510a6409dc595597", @"/Views/Contact/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9a59b7783d8b0512a9ae3ec4003f04bd353cebbb", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3252bb80a0572243a0a2c06d4a14dfe742524a68", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Contact_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable
@@ -66,7 +73,7 @@ using Restaurant.Models;
         <nav aria-label=""breadcrumb"">
             <ol class=""breadcrumb justify-content-center text-uppercase"">
                 <li class=""breadcrumb-item"">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3a9f18529ba51e4c0647891e510a6409dc5955974373", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3a9f18529ba51e4c0647891e510a6409dc5955974564", async() => {
                 WriteLiteral("Home");
             }
             );
@@ -122,7 +129,7 @@ using Restaurant.Models;
             BeginWriteAttribute("allowfullscreen", " allowfullscreen=\"", 2428, "\"", 2446, 0);
             EndWriteAttribute();
             WriteLiteral(" aria-hidden=\"false\"\r\n                        tabindex=\"0\"></iframe>\r\n            </div>\r\n            <div class=\"col-md-6\">\r\n                <div class=\"wow fadeInUp\" data-wow-delay=\"0.2s\">\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3a9f18529ba51e4c0647891e510a6409dc5955978229", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3a9f18529ba51e4c0647891e510a6409dc5955978420", async() => {
                 WriteLiteral(@"
                         <div class=""row g-3"">
                             <div class=""col-md-6"">

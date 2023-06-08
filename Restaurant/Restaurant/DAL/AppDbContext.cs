@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Restaurant.Models;
 
 namespace Restaurant.DAL
 {
@@ -8,5 +9,11 @@ namespace Restaurant.DAL
         {
             
         }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<Testimonial> Testimonials { get; set;}
+        public DbSet<Slider> Slider { get; set; }
+        public DbSet<About> About { get; set; }
+        public DbSet<Bio> Bio { get; set; }
+        public DbSet<Social_Media> SocialMedias { get; set; }
     }
 }

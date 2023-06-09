@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Restaurant.DAL;
 
 namespace Restaurant.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230609134852_CreateContactInfoandContactFormsTables")]
+    partial class CreateContactInfoandContactFormsTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -146,38 +148,6 @@ namespace Restaurant.Migrations
                     b.ToTable("ContactnInfo");
                 });
 
-            modelBuilder.Entity("Restaurant.Models.Reservation", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreatedTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Message")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Time")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Reservations");
-                });
-
             modelBuilder.Entity("Restaurant.Models.Service", b =>
                 {
                     b.Property<int>("Id")
@@ -189,9 +159,6 @@ namespace Restaurant.Migrations
                         .IsRequired()
                         .HasMaxLength(85)
                         .HasColumnType("nvarchar(85)");
-
-                    b.Property<string>("Icon")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeactive")
                         .HasColumnType("bit");

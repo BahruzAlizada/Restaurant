@@ -15,5 +15,8 @@ namespace Restaurant.DAL
         public DbSet<About> About { get; set; }
         public DbSet<Bio> Bio { get; set; }
         public DbSet<Social_Media> SocialMedias { get; set; }
+        public DbSet<ContactInfo> ContactnInfo { get; set; }
+        public DbSet<ContactForm> ContactForms { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
     }
 }

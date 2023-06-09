@@ -1,4 +1,6 @@
-﻿<div class="container-xxl py-5 bg-dark hero-header mb-5">
+﻿@model ContactForm
+
+<div class="container-xxl py-5 bg-dark hero-header mb-5">
     <div class="container text-center my-5 pt-5 pb-4">
         <h1 class="display-3 text-white mb-3 animated slideInDown">Contact</h1>
         <nav aria-label="breadcrumb">
@@ -19,20 +21,7 @@
         </div>
         <div class="row g-4">
             <div class="col-12">
-                <div class="row gy-4">
-                    <div class="col-md-4">
-                        <h5 class="section-title ff-secondary fw-normal text-start text-primary">Booking</h5>
-                        <p><i class="fa fa-envelope-open text-primary me-2"></i>book@example.com</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h5 class="section-title ff-secondary fw-normal text-start text-primary">General</h5>
-                        <p><i class="fa fa-envelope-open text-primary me-2"></i>info@example.com</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h5 class="section-title ff-secondary fw-normal text-start text-primary">Technical</h5>
-                        <p><i class="fa fa-envelope-open text-primary me-2"></i>tech@example.com</p>
-                    </div>
-                </div>
+               @await Component.InvokeAsync("ContactInfo")
             </div>
             <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
                 <iframe class="position-relative rounded w-100 h-100"
@@ -42,30 +31,34 @@
             </div>
             <div class="col-md-6">
                 <div class="wow fadeInUp" data-wow-delay="0.2s">
-                    <form>
+                    <form method="post">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+                                    <input asp-for="Name" class="form-control" placeholder="Your Name">
+                                    <label asp-for="Name" for="name">Your Name</label>
+                                    <span class="text-danger" asp-validation-for="Name"></span>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
+                                    <input asp-for="Email" class="form-control" placeholder="Your Email">
+                                    <label asp-for="Email">Your Email</label>
+                                    <span class="text-danger" asp-validation-for="Email"></span>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
+                                    <input asp-for="Subject" class="form-control" placeholder="Subject">
+                                    <label asp-for="Subject" >Subject</label>
+                                    <span class="text-danger" asp-validation-for="Subject"></span>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
-                                    <label for="message">Message</label>
+                                    <textarea asp-for="Message" class="form-control" placeholder="Leave a message here" style="height: 150px"></textarea>
+                                    <label asp-for="Message" for="message">Message</label>
+                                    <span class="text-danger" asp-validation-for="Message"></span>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -79,3 +72,7 @@
     </div>
 </div>
 <!-- Contact End -->
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

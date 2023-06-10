@@ -1,0 +1,142 @@
+﻿@model MenuVM
+
+<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
+    <h1 class="mb-5">Most Popular Items</h1>
+</div>
+<div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+        <li class="nav-item">
+            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+                <i class="fa fa-pizza-slice fa-2x text-primary"></i>
+                <div class="ps-3">
+
+                    <p class="mt-n1 mb-0">Pizza</p>
+                </div>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+                <i class="fa fa-hamburger fa-2x text-primary"></i>
+                <div class="ps-3">
+                    <p class="mt-n1 mb-0">Burger</p>
+                </div>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
+                <i class="fa fa-utensils fa-2x text-primary"></i>
+                <div class="ps-3">
+                    <p class="mt-n1 mb-0">Dinner</p>
+                </div>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-4">
+                <i class="fa fa-coffee fa-2x text-primary"></i>
+                <div class="ps-3">
+                    <p class="mt-n1 mb-0">Drink</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id="tab-1" class="tab-pane fade show p-0 active">
+            <div class="row g-4">
+                @foreach (Product product in Model.Products)
+                {
+                    @if (product.CategoryId == 1)
+                    {
+                        <div class="col-lg-6">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="~/img/@product.Image" alt="" style="width: 80px;">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                        <span>@product.Name</span>
+                                        <span class="text-primary">$@product.Price</span>
+                                    </h5>
+                                    <small class="fst-italic">@product.Description</small>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+
+
+            </div>
+        </div>
+
+        <div id="tab-2" class="tab-pane fade show p-0">
+            <div class="row g-4">
+                @foreach (Product item in Model.Products)
+                {
+                    @if (item.CategoryId == 2)
+                    {
+                        <div class="col-lg-6">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="~/img/@item.Image" alt="" style="width: 80px;">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                        <span>@item.Name</span>
+                                        <span class="text-primary">$@item.Price</span>
+                                    </h5>
+                                    <small class="fst-italic">@item.Description</small>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+
+        <div id="tab-3" class="tab-pane fade show p-0">
+            <div class="row g-4">
+                @foreach (Product item2 in Model.Products)
+                {
+                    @if (item2.CategoryId == 4)
+                    {
+                        <div class="col-lg-6">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="~/img/@item2.Image" alt="" style="width: 80px;">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                        <span>@item2.Name</span>
+                                        <span class="text-primary">$@item2.Price</span>
+                                    </h5>
+                                    <small class="fst-italic">@item2.Description</small>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+
+        <div id="tab-4" class="tab-pane fade show p-0">
+            <div class="row g-4">
+                @foreach (Product item3 in Model.Products)
+                {
+                    @if (item3.CategoryId == 3)
+                    {
+                        <div class="col-lg-6">
+                            <div class="d-flex align-items-center">
+                                <img class="flex-shrink-0 img-fluid rounded" src="~/img/@item3.Image" alt="" style="width: 80px;">
+                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                        <span>@item3.Name</span>
+                                        <span class="text-primary">$@item3.Price</span>
+                                    </h5>
+                                    <small class="fst-italic">@item3.Description</small>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+
+    </div>
+</div>

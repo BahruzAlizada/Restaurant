@@ -157,3 +157,5 @@ C:\Users\Esma\Desktop\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Vi
 C:\Users\Esma\Desktop\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Views\Shared\Components\Header\Default.cshtml.g.cs
 C:\Users\Esma\Desktop\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Views\Shared\Components\Footer\Default.cshtml.g.cs
 C:\Users\Esma\Desktop\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Views\Shared\Components\ContactInfo\Default.cshtml.g.cs
+C:\Users\Esma\Desktop\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Views\Shared\Components\Chef\Default.cshtml.g.cs
+C:\Users\Esma\Desktop\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Views\Shared\Components\Menu\Default.cshtml.g.cs

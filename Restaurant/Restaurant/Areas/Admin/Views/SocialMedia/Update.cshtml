@@ -1,0 +1,46 @@
+﻿@model Social_Media
+
+<div class="row">
+    <div class="col-8">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Update Social Media</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="mb-3 form-group">
+                        <label asp-for="FaceeBookLink" class="form-label">FaceeBook Link</label>
+                        <input asp-for="FaceeBookLink" class="form-control" />
+                        <span class="text-danger" asp-validation-for="FaceeBookLink"></span>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="InstagramLink" class="form-label">Instagram Link</label>
+                        <input asp-for="InstagramLink" class="form-control" />
+                        <span class="text-danger" asp-validation-for="InstagramLink"></span>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="TwitterLink" class="form-label">Twitter Link</label>
+                        <input asp-for="TwitterLink" class="form-control" />
+                        <span class="text-danger" asp-validation-for="TwitterLink"></span>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="YoutbeLink" class="form-label">Youtbe Link</label>
+                        <input asp-for="YoutbeLink" class="form-control" />
+                        <span class="text-danger" asp-validation-for="YoutbeLink"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a class="btn btn-secondary" asp-action="Index">Go Back</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+

@@ -1,0 +1,85 @@
+﻿@model ContactVM
+<hr class="my-5" />
+
+<!-- Bordered Table -->
+<div class="card">
+    <div class="card-header" style="display:flex;justify-content:center">
+        <h2 style="text-align:center;">
+            Contact Info
+        </h2> 
+    </div>
+    <div class="card-body">
+        <div class="table-responsive text-nowrap">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Booking Email</th>
+                        <th>General Email</th>
+                        <th>Tecnichial Email</th>
+                        <th style="text-align:right">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (ContactInfo item in Model.ContactInfo)
+                    {
+                        <tr>
+                           <td>@item.BookingEmail</td>
+                           <td>@item.GeneralEmail</td>
+                           <td>@item.TechinialEmail</td>
+
+                            <td>
+                                <div style="display:flex;justify-content:flex-end">                         
+                                    <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-info rounded-pill text-white" style="margin-right:10px">Update</a>          
+                                </div>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--/ Bordered Table -->
+
+<hr class="my-5" />
+
+
+<!-- Bordered Table -->
+<div class="card">
+    <div class="card-header" style="display:flex;justify-content:center">
+        <h2>
+            Contact Form
+        </h2>     
+    </div>
+    <div class="card-body">
+        <div class="table-responsive text-nowrap">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Subject</th>
+                        <th>Message</th>
+                        <th>Created Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (ContactForm item in Model.Form)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.Email</td>
+                            <td>@item.Subject</td>
+                            <td>@item.Message</td>
+                            <td>@item.CreateDate</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--/ Bordered Table -->
+
+<hr class="my-5" />

@@ -1,0 +1,44 @@
+﻿@model List<Reservation>
+<hr class="my-5" />
+
+<!-- Bordered Table -->
+<div class="card">
+    <div class="card-header" style="display:flex;justify-content:space-between">
+        <h2>
+            Reservations
+        </h2>
+       
+    </div>
+    <div class="card-body">
+        <div class="table-responsive text-nowrap">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>CreatedTime</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Reservation item in Model)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.Email</td>
+                            <td>@item.Date.ToString("dd MMMM,yyyy")</td>
+                            <td>@item.Time.ToShortTimeString()</td>
+                            <td>@item.CreatedTime</td>
+                            <td>@item.Message</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--/ Bordered Table -->
+
+<hr class="my-5" />

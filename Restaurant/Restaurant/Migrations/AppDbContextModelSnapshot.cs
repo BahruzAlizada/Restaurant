@@ -122,6 +122,9 @@ namespace Restaurant.Migrations
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsDeactive")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Role")
                         .HasColumnType("nvarchar(max)");
 

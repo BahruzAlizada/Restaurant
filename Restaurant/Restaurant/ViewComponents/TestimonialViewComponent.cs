@@ -20,7 +20,7 @@ namespace Restaurant.ViewComponents
 		#region InvokeAsync
 		public async Task<IViewComponentResult> InvokeAsync()
 		{
-			List<Testimonial> testimonials = await _db.Testimonials.OrderByDescending(x => x.Id).Take(5).ToListAsync();
+			List<Testimonial> testimonials = await _db.Testimonials.Where(x=>!x.IsDeactive).OrderByDescending(x => x.Id).Take(5).ToListAsync();
 			return View(testimonials);
 		}
 		#endregion

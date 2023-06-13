@@ -1,0 +1,39 @@
+﻿@model ContactInfo
+
+<div class="row">
+    <div class="col-8">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Update Contact Info</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="mb-3 form-group">
+                        <label asp-for="BookingEmail" class="form-label">Booking Email</label>
+                        <input asp-for="BookingEmail" class="form-control" />
+                        <span class="text-danger" asp-validation-for="BookingEmail"></span>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="GeneralEmail" class="form-label">General Email</label>
+                        <input asp-for="GeneralEmail" class="form-control" />
+                        <span class="text-danger" asp-validation-for="GeneralEmail"></span>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="TechinialEmail" class="form-label">Technicial Email</label>
+                        <input asp-for="TechinialEmail" class="form-control" />
+                        <span class="text-danger" asp-validation-for="TechinialEmail"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a class="btn btn-secondary" asp-action="Index">Go Back</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

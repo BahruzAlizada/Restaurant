@@ -32,7 +32,7 @@ namespace Restaurant.DAL
             modelBuilder.Entity<Position>().HasData(
                 new Position {Id=1, PositionName = "Chef", Salary = 600 },
                 new Position {Id=2, PositionName = "Master Chef", Salary = 1000 },
-                new Position {Id=3, PositionName = "Wailter", Salary=400}); 
+                new Position {Id=3, PositionName = "Wailter", Salary=400});   
         }
 
     }

@@ -1,0 +1,15 @@
+﻿@model About
+
+<div style="display:flex;">
+	<img src="~/img/@Model.AboutImage1" style="height:300px;width:300px;object-fit:cover" />
+	<img src="~/img/@Model.AboutImage2" style="height:300px;width:300px;object-fit:cover" />
+	<img src="~/img/@Model.AboutImage3" style="height:300px;width:300px;object-fit:cover" />
+	<img src="~/img/@Model.AboutImage4" style="height:300px;width:300px;object-fit:cover" />
+</div>
+
+<h6>@Html.Raw(Model.Title)</h6>
+<p>@Html.Raw(Model.Description)</p>
+<p>Experience - @Model.Experience</p>
+<p>Popular Master Chefs - @Model.PopularMasterChef</p>
+
+<a asp-action="Index" class="btn btn-secondary">Go Back</a>

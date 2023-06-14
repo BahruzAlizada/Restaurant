@@ -1,4 +1,7 @@
-﻿namespace Restaurant.Models
+﻿using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Restaurant.Models
 {
     public class Product
     {
@@ -10,5 +13,7 @@
         public bool IsDeactive { get; set; }
         public Category Category { get; set; }
         public int CategoryId { get; set; }
+        [NotMapped]
+        public IFormFile Photo { get; set; }
     }
 }

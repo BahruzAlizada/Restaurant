@@ -343,3 +343,12 @@ C:\Users\Esma\Desktop\GitHub Project\Restaurant\Restaurant\Restaurant\obj\Debug\
 C:\Users\Esma\Desktop\GitHub Project\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Areas\Admin\Views\Chefs\Index.cshtml.g.cs
 C:\Users\Esma\Desktop\GitHub Project\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Areas\Admin\Views\Chefs\Create.cshtml.g.cs
 C:\Users\Esma\Desktop\GitHub Project\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Areas\Admin\Views\Chefs\Update.cshtml.g.cs
+C:\Users\Esma\Desktop\GitHub Project\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Areas\Admin\Views\Bio\Index.cshtml.g.cs
+C:\Users\Esma\Desktop\GitHub Project\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Areas\Admin\Views\Bio\Update.cshtml.g.cs
+C:\Users\Esma\Desktop\GitHub Project\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Areas\Admin\Views\About\Index.cshtml.g.cs
+C:\Users\Esma\Desktop\GitHub Project\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Areas\Admin\Views\About\Detail.cshtml.g.cs
+C:\Users\Esma\Desktop\GitHub Project\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Areas\Admin\Views\About\Update.cshtml.g.cs
+C:\Users\Esma\Desktop\GitHub Project\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Areas\Admin\Views\Products\Index.cshtml.g.cs
+C:\Users\Esma\Desktop\GitHub Project\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Areas\Admin\Views\Products\Detail.cshtml.g.cs
+C:\Users\Esma\Desktop\GitHub Project\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Areas\Admin\Views\Products\Create.cshtml.g.cs
+C:\Users\Esma\Desktop\GitHub Project\Restaurant\Restaurant\Restaurant\obj\Debug\net5.0\Razor\Areas\Admin\Views\Products\Update.cshtml.g.cs

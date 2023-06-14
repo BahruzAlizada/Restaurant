@@ -1,0 +1,64 @@
+﻿@model Bio
+
+<div class="row">
+    <div class="col-8">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Update Cheff</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="mb-3 form-group">
+                        <label asp-for="Header" class="form-label">Header</label>
+                        <input asp-for="Header" class="form-control" />
+                        <span class="text-danger" asp-validation-for="Header"></span>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="FooterAddress" class="form-label">Footer Address</label>
+                        <input asp-for="FooterAddress" class="form-control" />
+                        <span class="text-danger" asp-validation-for="FooterAddress"></span>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="FooterEmail" class="form-label">Footer Email</label>
+                        <input asp-for="FooterEmail" class="form-control" />
+                        <span class="text-danger" asp-validation-for="FooterEmail"></span>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="FooterPhone" class="form-label">Footer Phone</label>
+                        <input asp-for="FooterPhone" class="form-control" />
+                        <span class="text-danger" asp-validation-for="FooterPhone"></span>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="OpenTime" class="form-label">Open Time</label>
+                        <input asp-for="OpenTime" type="time" class="form-control" />
+                        <span class="text-danger" asp-validation-for="OpenTime"></span>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="CloseTime" class="form-label">Close Time</label>
+                        <input asp-for="CloseTime" type="time" class="form-control" />
+                        <span class="text-danger" asp-validation-for="CloseTime"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a class="btn btn-secondary" asp-action="Index">Go Back</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+
+
+
+
+

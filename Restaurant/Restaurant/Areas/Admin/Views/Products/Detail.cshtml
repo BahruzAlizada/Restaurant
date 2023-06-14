@@ -1,0 +1,8 @@
+﻿@model Product
+
+<img src="~/img/@Model.Image" style="height:300px; width:300px;object-fit:cover;" />
+<h6>@Model.Name</h6>
+<p>@Model.Price$</p>
+<p>@Model.Description</p>
+
+<a asp-action="Index" class="btn btn-secondary">Go Back</a>

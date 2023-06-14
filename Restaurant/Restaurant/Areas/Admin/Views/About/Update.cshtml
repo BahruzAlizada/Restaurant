@@ -1,0 +1,95 @@
+﻿@model About
+
+<div class="row">
+    <div class="col-8">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Update About</h5>
+            </div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="mb-3 form-group">
+                        <label asp-for="AboutPhoto1" class="form-label">Image 1</label>
+                        <input asp-for="AboutPhoto1" accept="image/*" class="form-control" />
+                        <span class="text-danger" asp-validation-for="AboutPhoto1"></span>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="AboutPhoto2" class="form-label">Image 2</label>
+                        <input asp-for="AboutPhoto2" accept="image/*" class="form-control" />
+                        <span class="text-danger" asp-validation-for="AboutPhoto2"></span>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="AboutPhoto3" class="form-label">Image 3</label>
+                        <input asp-for="AboutPhoto3" accept="image/*" class="form-control" />
+                        <span class="text-danger" asp-validation-for="AboutPhoto3"></span>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="AboutPhoto4" class="form-label">Image 4</label>
+                        <input asp-for="AboutPhoto4" accept="image/*" class="form-control" />
+                        <span class="text-danger" asp-validation-for="AboutPhoto4"></span>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="Title" class="form-label">Title</label>
+                        <textarea asp-for="Title" id="editor" class="form-control"></textarea>
+                        <span class="text-danger" asp-validation-for="Title"></span>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="Description" class="form-label">Description</label>
+                        <textarea asp-for="Description" id="editorr" class="form-control"></textarea>
+                        <span class="text-danger" asp-validation-for="Description"></span>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label asp-for="PopularMasterChef" class="form-label">Popular Master Chef</label>
+                        <input asp-for="PopularMasterChef" class="form-control" />
+                        <span class="text-danger" asp-validation-for="PopularMasterChef"></span>
+                    </div>
+
+                     <div class="mb-3 form-group">
+                        <label asp-for="Experience" class="form-label">Experience</label>
+                        <input asp-for="Experience" class="form-control" />
+                        <span class="text-danger" asp-validation-for="Experience"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a class="btn btn-secondary" asp-action="Index">Go Back</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editorr'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
+}
+
+
+
+
+
+
+

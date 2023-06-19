@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Restaurant.DAL;
@@ -6,11 +7,13 @@ using Restaurant.Helpers;
 using Restaurant.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Threading.Tasks;
 
 namespace Restaurant.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin,ComManager")]
     [Area("Admin")]
     public class SliderController : Controller
     {

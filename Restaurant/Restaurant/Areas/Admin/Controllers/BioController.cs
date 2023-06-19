@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Restaurant.DAL;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Restaurant.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin,ComManager")]
     [Area("Admin")]
     public class BioController : Controller
     {

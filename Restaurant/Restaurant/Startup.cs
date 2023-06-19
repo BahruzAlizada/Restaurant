@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Restaurant.DAL;
+using Restaurant.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +28,16 @@ namespace Restaurant
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddIdentity<AppUser, IdentityRole>(Identityoptions =>
+            {
+                Identityoptions.User.RequireUniqueEmail = true;
+                Identityoptions.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789._";
+                Identityoptions.Password.RequiredLength = 8;
+                Identityoptions.Password.RequireNonAlphanumeric = false;
+                Identityoptions.Lockout.AllowedForNewUsers = true;
+                Identityoptions.Lockout.MaxFailedAccessAttempts = 5;
+                Identityoptions.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
+            }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
             services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseSqlServer(_configuration.GetConnectionString("Default"));
@@ -50,6 +62,7 @@ namespace Restaurant
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

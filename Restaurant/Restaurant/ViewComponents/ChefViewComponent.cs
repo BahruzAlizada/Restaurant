@@ -20,8 +20,9 @@ namespace Restaurant.ViewComponents
         #region InvokeAsync
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            List<Cheff> cheffs = await _db.Chefs.Take(4).ToListAsync();
-            return View(cheffs);
+            List<Employee> employees = await _db.Employees.Where(x=>x.PositionId==6 || x.PositionId==7)
+                                        .Include(x=>x.Position).Take(4).ToListAsync();
+            return View(employees);
         }
         #endregion
     }

@@ -1,15 +1,16 @@
-﻿@model Cheff
+﻿@model Employee
 
 <div class="row">
     <div class="col-8">
         <div class="card mb-4">
             <div class="card-header d-flex justify-content-between align-items-center">
-                <h5 class="mb-0">Create Cheff</h5>
+                <h5 class="mb-0">Update Employee</h5>
             </div>
             <div class="card-body">
                 <form method="post" enctype="multipart/form-data">
+
                     <div class="mb-3 form-group">
-                        <label asp-for="Photo" class="form-label">Photo</label>
+                        <label asp-for="Photo" class="form-label">Image</label>
                         <input asp-for="Photo" accept="image/*" class="form-control" />
                         <span class="text-danger" asp-validation-for="Photo"></span>
                     </div>
@@ -21,9 +22,24 @@
                     </div>
 
                     <div class="mb-3 form-group">
-                        <label asp-for="Role" class="form-label">Role</label>
-                        <input asp-for="Role" class="form-control" />
-                        <span class="text-danger" asp-validation-for="Role"></span>
+                        <label asp-for="Email" class="form-label">Email</label>
+                        <input asp-for="Email" class="form-control" />
+                        <span class="text-danger" asp-validation-for="Email"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Select Position</label>
+                        <select class="form-control" name="positionId">
+                            @foreach (Position position in ViewBag.Positions)
+                            if(Model.PositionId==position.Id)
+                            {
+                                <option selected value="@position.Id">@position.PositionName</option>
+                            }
+                           else
+                            {
+                                <option value="@position.Id">@position.PositionName</option>
+                            }
+                        </select>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -37,6 +53,7 @@
 @section Scripts{
     <partial name="_ValidationScriptsPartial" />
 }
+
 
 
 

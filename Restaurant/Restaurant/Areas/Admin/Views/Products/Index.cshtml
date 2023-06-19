@@ -14,7 +14,7 @@
     </div>
     <div class="card-body">
         <div class="table-responsive text-nowrap">
-            <table class="table table-bordered">
+            <table id="table" class="table table-bordered">
                 <thead>
                     <tr>
                         <th>Image</th>
@@ -30,7 +30,7 @@
                     {
                         <tr>
                             <td>
-                                <img src="~/img/@item.Image" style="height:75px;width:175px;object-fit:cover;border-radius:0px;">
+                                <img src="~/img/@item.Image" style="height:80px;width:88px;object-fit:cover;border-radius:0px;">
                             </td>
                             <td>@item.Name</td>
                             <th>$@item.Price</th>
@@ -47,15 +47,15 @@
                             </td>
                             <td>
                                 <div style="display:flex;justify-content:flex-end">
-                                    <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-warning rounded-pill text-white" style="margin-right:10px">Detail</a>
-                                    <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-info rounded-pill text-white" style="margin-right:10px">Update</a>
+                                    <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-warning  text-white" style="margin-right:10px;padding:10px;">Detail</a>
+                                    <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-info text-white" style="margin-right:10px;padding:10px;">Update</a>
                                     @if (item.IsDeactive)
                                     {
-                                        <a asp-action="Activity" asp-route-id="@item.Id" class="btn btn-success rounded-pill text-white" style="margin-right:10px;width:117px;">Activate</a>
+                                        <a asp-action="Activity" asp-route-id="@item.Id" class="btn btn-success  text-white" style="margin-right:10px;width:117px;padding:10px;">Activate</a>
                                     }
                                     else
                                     {
-                                        <a asp-action="Activity" asp-route-id="@item.Id" class="btn btn-danger rounded-pill text-white" style="margin-right:10px;width:117px;">Deactivate</a>
+                                        <a asp-action="Activity" asp-route-id="@item.Id" class="btn btn-danger  text-white" style="margin-right:10px;width:117px;padding:10px;">Deactivate</a>
                                     }
                                 </div>
                             </td>
@@ -69,5 +69,16 @@
 <!--/ Bordered Table -->
 
 <hr class="my-5" />
+
+@section Css{
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+}
+
+@section Scripts{
+    <script asp-append-version="true" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+    <script>
+        let table = new DataTable('#table');
+    </script>
+}
 
 

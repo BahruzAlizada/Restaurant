@@ -10,6 +10,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0 pe-4">
+            @if (User.Identity.IsAuthenticated)
+            {
+                @if(User.IsInRole("Admin"))
+                {
+                    <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" class="nav-item nav-link">Admin</a>
+                }
+                @if (User.IsInRole("ComManager"))
+                {
+                    <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" class="nav-item nav-link">Admin</a>
+                }
+            }
             <a asp-controller="Home" asp-action="Index" class="nav-item nav-link">Home</a>
             <a asp-controller="About" asp-action="Index" class="nav-item nav-link">About</a>
             <a asp-controller="Menu" asp-action="Index" class="nav-item nav-link">Menu</a>

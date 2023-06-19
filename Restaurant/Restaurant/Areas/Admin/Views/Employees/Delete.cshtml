@@ -1,0 +1,33 @@
+﻿@model Employee
+
+<div class="row">
+    <div class="col-8">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Delete Employee</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+
+                    <p>Are you sure This Employee delete?</p>
+                  
+
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <a class="btn btn-secondary" asp-action="Index">Go Back</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+
+
+
+
+
+

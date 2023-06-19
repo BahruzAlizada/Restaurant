@@ -9,7 +9,7 @@
             Testimonials
         </h2>
         <div>
-            <a asp-action="Create" class="btn btn-primary rounded-pill text-white" style="margin-right:10px">Create</a>
+            <a asp-action="Create" class="btn btn-primary text-white" style="margin-right:10px">Create</a>
         </div>
     </div>
     <div class="card-body">
@@ -39,15 +39,15 @@
                             </td>
                             <td>
                                 <div style="display:flex;justify-content:flex-end">
-                                    <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-warning rounded-pill text-white" style="margin-right:10px">Detail</a>
-                                    <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-info rounded-pill text-white" style="margin-right:10px">Update</a>
+                                    <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-warning text-white" style="margin-right:10px">Detail</a>
+                                    <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-info text-white" style="margin-right:10px">Update</a>
                                     @if (item.IsDeactive)
                                     {
-                                        <a asp-action="Activity" asp-route-id="@item.Id" class="btn btn-success rounded-pill text-white" style="margin-right:10px;width:117px;">Activate</a>
+                                        <a asp-action="Activity" asp-route-id="@item.Id" class="btn btn-success text-white" style="margin-right:10px;width:117px;">Activate</a>
                                     }
                                     else
                                     {
-                                        <a asp-action="Activity" asp-route-id="@item.Id" class="btn btn-danger rounded-pill text-white" style="margin-right:10px;width:117px;">Deactivate</a>
+                                        <a asp-action="Activity" asp-route-id="@item.Id" class="btn btn-danger text-white" style="margin-right:10px;width:117px;">Deactivate</a>
                                     }
                                 </div>
                             </td>
